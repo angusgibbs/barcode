@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Barcode Test</title>
+	</head>
+	<body>
+		<form>
+			<input type="text" value="HELLO">
+			</form>
+
+		<div id="barcode"></div>
+		
+		<script src="../lib/barcode.js"></script>
+		<script>
+			document.querySelector('form').addEventListener('submit', makeBarcode);
+			window.addEventListener('load', makeBarcode);
+
+			function makeBarcode(e) {
+				if (e) e.preventDefault();
+
+				var label = barcode.create(document.querySelector('input').value);
+
+				label.appendTo(document.querySelector('#barcode'));
+			}
+		</script>
+	</body>
+</html>
