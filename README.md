@@ -4,7 +4,7 @@ Generates barcode 39 labels in browser.
 
 ## Usage
 
-Once you have barcode.js included on your page, call `barcode.create` to generate your barcode:
+Once you have [barcode.js](https://raw.github.com/angusgibbs/barcode/master/lib/barcode.js) included on your page, call `barcode.create` to generate your barcode:
 
 ```javascript
 var code = barcode.create('HELLO WORLD');
